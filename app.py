@@ -72,20 +72,24 @@ def mostrar_resultado(imagen):
     pred = results[0].plot()
     st.image(pred, caption="Resultado de la detección", use_container_width=True)
 
-# 📸 Entrada por cámara
+#Entrada por cámara
 if option == "📸 Cámara":
     img_file_buffer = st.camera_input("Capture una foto para identificar un producto")    
     if img_file_buffer is None:
         st.info("Por favor tome una foto")
     else:
         image = Image.open(img_file_buffer)
+        st.subheader("📸 Imagen capturada")
         st.image(image, caption="Imagen capturada", use_container_width=True)
+        st.subheader("🔍 Resultado de la detección")
         mostrar_resultado(image)
 
-# 🖼️ Subir imagen
+#Subir imagen
 elif option == "🖼️ Subir imagen":
     uploaded_file = st.file_uploader("Sube una imagen", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
+        st.subheader("🖼️Imagen cargada")
         st.image(image, caption="Imagen cargada", use_container_width=True)
+        st.subheader("Resultado de la detección")
         mostrar_resultado(image)
