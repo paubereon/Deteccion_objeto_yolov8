@@ -91,5 +91,5 @@ elif option == "🖼️ Subir imagen":
         image = Image.open(uploaded_file)
         st.subheader("🖼️Imagen cargada")
         st.image(image, caption="Imagen cargada", use_container_width=True)
-        st.subheader("Resultado de la detección")
+        st.subheader("🔍Resultado de la detección")
         mostrar_resultado(image)
