@@ -79,7 +79,7 @@ if option == "📸 Cámara":
         st.info("Por favor tome una foto")
     else:
         image = Image.open(img_file_buffer)
-        st.image(image, caption="Imagen capturada", use_column_width=True)
+        st.image(image, caption="Imagen capturada", use_container_width=True)
         mostrar_resultado(image)
 
 # 🖼️ Subir imagen
@@ -87,5 +87,5 @@ elif option == "🖼️ Subir imagen":
     uploaded_file = st.file_uploader("Sube una imagen", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
-        st.image(image, caption="Imagen cargada", use_column_width=True)
+        st.image(image, caption="Imagen cargada", use_container_width=True)
         mostrar_resultado(image)
