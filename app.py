@@ -2,7 +2,6 @@
 
 # importing the libraries and dependencies needed for creating the UI and supporting the deep learning models used in the project
 import streamlit as st
-import cv2
 from ultralytics import YOLO
 import numpy as np
 from PIL import Image
