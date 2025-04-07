@@ -89,7 +89,7 @@ elif option == "🖼️ Subir imagen":
     uploaded_file = st.file_uploader("Sube una imagen", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
-        st.subheader("🖼️Imagen cargada")
+        st.subheader("🖼️Imagen que seleccionaste:")
         st.image(image, caption="Imagen cargada", use_container_width=True)
         st.subheader("🔍Resultado de la detección")
         mostrar_resultado(image)
