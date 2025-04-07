@@ -68,6 +68,7 @@ option = st.radio("Selecciona el método de entrada:", ("📸 Cámara", "🖼️
 
 # Función para mostrar resultados de detección
 def mostrar_resultado(imagen):
+    imagen = imagen.convert("RGB")  # Asegura que esté en RGB
     results = model.predict(imagen, conf=0.25)
     pred = results[0].plot()
     st.image(pred, caption="Resultado de la detección", use_container_width=True)
