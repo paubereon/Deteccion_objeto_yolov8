@@ -50,7 +50,7 @@ with st.container(border=True):
     https://colab.research.google.com/drive/11pruICJyx5VFHeWBX_wklpTmNKDprzcX?usp=sharing""")
 
 # Subtítulo visual
-st.markdown("<h2 style='text-align: center;'>Sube una foto de un </h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>Sube una foto para detectar botas, guantes, cascos, chalecos y persona</h2>", unsafe_allow_html=True)
 
 # Cargar el modelo YOLOv8 entrenado
 model = YOLO("best.pt")
