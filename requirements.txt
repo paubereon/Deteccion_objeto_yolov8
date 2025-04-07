@@ -1,1 +1,7 @@
-numpy==2.0.2opencv-python==4.11.0.86pillow==11.1.0streamlit==1.44.0tensorflow==2.19.0torch==2.6.0torchvision==0.21.0tzdata==2025.2ultralytics==8.3.103ultralytics-thop==2.0.14zipp==3.21.0 
+streamlit==1.44.0
+ultralytics==8.3.103
+opencv-python==4.11.0.86
+numpy==2.0.2
+pillow==11.1.0
+torch==2.6.0
+torchvision==0.21.0
