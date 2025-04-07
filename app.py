@@ -71,6 +71,7 @@ def mostrar_resultado(imagen):
     imagen = imagen.convert("RGB")  # Asegura que esté en RGB
     results = model.predict(imagen, conf=0.25)
     pred = results[0].plot()
+    pred = Image.fromarray(pred[:, :, ::-1])  # Convierte de BGR a RGB
     st.image(pred, caption="Resultado de la detección", use_container_width=True)
 
 #Entrada por cámara
