@@ -8,7 +8,7 @@ from PIL import Image
 
 # Configuramos la página de Streamlit
 st.set_page_config(page_title="Aplicación de detección de objetos", 
-                   page_icon="happy.png",
+                   page_icon="happy.png", 
                    layout="centered",
                    initial_sidebar_state="auto")
 
@@ -23,12 +23,12 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Interfaz de usuario
 with st.sidebar:
-    st.image('Objetos.png', caption='Imagen de ejemplo de los objetos a detectar')
+    st.image('Objetos.png', caption='Imagen de ejemplo de los objetos a detectar', use_container_width=True)
     st.title("Entrenamiento de un modelo YOLOv8 para detector de objetos personalizado")
     st.subheader("Detecta botas, guantes, cascos, chalecos y personas en imágenes")
     st.write("Capture una imagen para realizar la detección de los objetos mencionados.")
 
-st.image('logo.png')
+st.image('logo.png', use_container_width=True)
 st.markdown('<h3 style="font-size: 18px;">Elaborado por: Paula Betina Reyes Anaya', unsafe_allow_html=True)
 
 # Definimos el título y la descripción de la aplicación
@@ -70,7 +70,7 @@ option = st.radio("Selecciona el método de entrada:", ("📸 Cámara", "🖼️
 def mostrar_resultado(imagen):
     results = model.predict(imagen, conf=0.25)
     pred = results[0].plot()
-    st.image(pred, caption="Resultado de la detección", use_column_width=True)
+    st.image(pred, caption="Resultado de la detección", use_container_width=True)
 
 # 📸 Entrada por cámara
 if option == "📸 Cámara":
